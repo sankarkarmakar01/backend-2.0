@@ -1,0 +1,258 @@
+/* Global Styles */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  background-color: #f5f5f5;
+  color: #333;
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header Styles */
+header {
+  background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  font-size: 2.5rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.tagline {
+  font-weight: 300;
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Hero Section */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 0;
+  flex-wrap: wrap;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 300px;
+  padding: 20px;
+}
+
+.hero-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #6e48aa;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+/* Photo Container */
+.photo-container {
+  flex: 1;
+  min-width: 300px;
+  position: relative;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.woman-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+  object-fit: cover;
+  object-position: center;
+  transition: all 0.3s ease;
+}
+
+.photo-frame {
+  position: relative;
+  padding: 20px;
+  background: white;
+  border-radius: 20px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.photo-frame::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px dashed rgba(110, 72, 170, 0.3);
+  border-radius: 10px;
+  pointer-events: none;
+  animation: rotate 60s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Button Styles */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  margin-right: 15px;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, #6e48aa 0%, #9d50bb 100%);
+  color: white;
+  border: 2px solid #6e48aa;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #9d50bb 0%, #6e48aa 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(110, 72, 170, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #6e48aa;
+  border: 2px solid #6e48aa;
+}
+
+.btn-secondary:hover {
+  background: rgba(110, 72, 170, 0.1);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(110, 72, 170, 0.2);
+}
+
+/* Features Section */
+.features {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+  color: #6e48aa;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.feature-card {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: #9d50bb;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: white;
+  padding: 40px 0;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin: 20px 0;
+}
+
+.footer-link {
+  color: #9d50bb;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+.copyright {
+  opacity: 0.7;
+  font-size: 0.9rem;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text {
+    margin-bottom: 40px;
+  }
+
+  .photo-container {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  .woman-photo {
+    max-width: 100%;
+  }
+
+  .btn {
+    margin: 0 10px 15px 0;
+  }
+}
