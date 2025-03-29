@@ -1,87 +1,22 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elegance - Artistry in Design</title>
-    <link rel="stylesheet" href="style.css">
-  </head>
-  <body>
-    <header>
-      <div class="container">
-        <div class="logo">ELEGANCE</div>
-        <div class="tagline">Where art meets design</div>
-      </div>
-    </header>
-
-    <section class="hero">
-      <div class="container">
-        <div class="hero-text">
-          <h1 class="hero-title">Discover the Art of Feminine Beauty</h1>
-          <p class="hero-subtitle">
-            Our collection celebrates the timeless elegance of womanhood through
-            stunning visual designs that capture emotion, strength, and grace in
-            every curve and contour.
-          </p>
-          <a href="#" class="btn btn-primary">Explore Gallery</a>
-          <a href="#" class="btn btn-secondary">Learn More</a>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+<body>
+    <h1>Home Page</h1>
+    <form action="/contact" method="POST">
+        <div>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
         </div>
-        <div class="photo-container">
-          <div class="photo-frame">
-            <img
-              src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=764&q=80"
-              alt="Beautiful woman portrait"
-              class="woman-photo"
-            />
-          </div>
+        <div>
+            <label for="message">Message</label>
+            <textarea name="message" id="message" placeholder="Write your message here"></textarea>
         </div>
-      </div>
-    </section>
-
-    <section class="features">
-      <div class="container">
-        <h2 class="section-title">Our Artistic Principles</h2>
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">✧</div>
-            <h3 class="feature-title">Harmony</h3>
-            <p>
-              Balanced compositions that create visual peace and elegance in
-              every design element.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">♡</div>
-            <h3 class="feature-title">Emotion</h3>
-            <p>
-              Designs that speak to the heart and evoke deep, meaningful
-              responses.
-            </p>
-          </div>
-          <div class="feature-card">
-            <div class="feature-icon">✦</div>
-            <h3 class="feature-title">Innovation</h3>
-            <p>
-              Pushing boundaries with creative techniques while respecting
-              classical beauty.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="footer-links">
-          <a href="#" class="footer-link">About</a>
-          <a href="#" class="footer-link">Gallery</a>
-          <a href="#" class="footer-link">Contact</a>
-          <a href="#" class="footer-link">Blog</a>
-        </div>
-        <p class="copyright">
-          © 2023 Elegance Art Designs. All rights reserved.
-        </p>
-      </div>
-    </footer>
-  </body>
+        <button>Submit</button>
+    </form>
+</body>
 </html>
